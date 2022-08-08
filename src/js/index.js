@@ -146,12 +146,23 @@ const messages = [
     }
 ]];
 
+// Zufallszahl zwischen 0 und der Länge des messages-Arrays 
 const rnd = Math.floor(Math.random() * messages.length);
-const choosenMes = Math.floor(Math.random() * messages[rnd].length)
+// Zufallszahl zwischen 0 und der Länge einer des jeweiligen Kategorien-Arrays inerhalb des messages-Arrays 
+const choosenMes = Math.floor(Math.random() * messages[rnd].length);
+
+// 3 Selektoren für die einzelnen object-properties 
 const topic = document.querySelector(".topic")
 const message = document.querySelector(".citation");
 const source = document.querySelector(".source");
+
+// Text inerhalb des Selektors anzeigen
 topic.innerHTML = messages[rnd][choosenMes].topic;
 message.innerHTML = messages[rnd][choosenMes].citation;
 source.innerHTML = messages[rnd][choosenMes].source;
 
+console.log("Zufallszahl rnd: " + rnd);
+console.log("Zufallszahl choosenMes: " + choosenMes);
+// console.log(messages[rnd][choosenMes].topic); 
+// console.log(messages[rnd][choosenMes].citation); 
+// messages[rnd][choosenMes].source != ""? console.log(messages[rnd][choosenMes].source): console.log(); 
