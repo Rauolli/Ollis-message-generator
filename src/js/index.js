@@ -1,4 +1,6 @@
-const aphorism = [
+const messages = [
+    /* Sprüche, Aphorismen, Zitate */
+    [
     {
         topic: "Sinn des Lebens",
         citation: "<p>Man lebt nicht wenn man nicht weiss wofür!</p>",
@@ -49,9 +51,9 @@ const aphorism = [
         citation: "<p>Je leichter du bist, um so besser trägt dich die Woge des Lebens.</p>",
         source: "Unbekannt"
     },    
-];
-
-const jokes = [
+],
+/* Witze aller Art */
+[
     {
         topic: "Witz, Polizisten",
         citation: "<p>Verkehrskontrolle. Der Polizist: \„Haben Sie etwas getrunken?\“</p><p>Autofahrer: \„Nein.\“</p><p>Polizist: \„Sollten Sie aber! Mindestens 2 Liter am Tag.\“</p>",
@@ -114,9 +116,9 @@ const jokes = [
     },
 
 
-];
-
-const studentResponses = [
+],
+/* Schülerantworten auf Tests, Fragen und Klausuren */
+[
     {
         topic: "Schülerantworten, Grundschule, Wortarten",
         citation: "<p>Adjektive: Finde das Gegenteil</p><p><ul><li>krank – gesund</li><li>hell – dunkel</li><li>pünktlich – kariert</li></ul></p>",
@@ -142,13 +144,14 @@ const studentResponses = [
         citation: "<p>Frage: Beschreibe mit eigenen Worten, was die Luftbrücke war.</p><p>Antwort: Das war eine Spezialbrücke, die man mit einer Fernbedienung steuern konnte. Beim Steuern hing sie in der Luft.</p>",
         source: "8. Klasse"
     }
-];
+]];
 
-const rnd = Math.random();
+const rnd = Math.floor(Math.random() * messages.length);
+const choosenMes = Math.floor(Math.random() * messages[rnd].length)
 const topic = document.querySelector(".topic")
 const message = document.querySelector(".citation");
 const source = document.querySelector(".source");
-topic.innerHTML = studentResponses[4].topic;
-message.innerHTML = studentResponses[4].citation;
-source.innerHTML = studentResponses[4].source;
+topic.innerHTML = messages[rnd][choosenMes].topic;
+message.innerHTML = messages[rnd][choosenMes].citation;
+source.innerHTML = messages[rnd][choosenMes].source;
 
