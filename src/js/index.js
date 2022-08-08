@@ -85,13 +85,13 @@ const messages = [
         source: ""
     },
     {
-        topic: "Witz, Abnehm",
-        citation: "<p>Ich würde ja gerne ein paar Kilos verlieren.</p><p>Aber ich verliere nie. Ich bin ein Gewinner!</p>",
+        topic: "Witz, Abnehmen",
+        citation: "<p>Ich würde ja gerne ein paar Kilos verlieren.</p><p>Aber ich verliere nie. Ich bin ein Gewinnertyp!</p>",
         source: ""
     },
     {
         topic: "Witz, Geschlechterkonflikte",
-        citation: "<p>Siri, warum sind Frauen so komisch zu mir?“</p><p>„Mein Name ist Alexa!</p>",
+        citation: "<p>\"Siri, warum sind Frauen so komisch zu mir?“</p><p>\„Mein Name ist Alexa!\"</p>",
         source: ""
     },
     {
