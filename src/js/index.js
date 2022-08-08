@@ -145,6 +145,7 @@ const messages = [
         source: "8. Klasse"
     }
 ]];
+
 // Zufallszahl zwischen 0 und der Länge des messages-Arrays 
 const rnd = Math.floor(Math.random() * messages.length);
 // Zufallszahl zwischen 0 und der Länge einer des jeweiligen Kategorien-Arrays inerhalb des messages-Arrays 
@@ -154,6 +155,7 @@ const choosenMes = Math.floor(Math.random() * messages[rnd].length);
 const topic = document.querySelector(".topic")
 const message = document.querySelector(".citation");
 const source = document.querySelector(".source");
+
 // Text inerhalb des Selektors anzeigen
 topic.innerHTML = messages[rnd][choosenMes].topic;
 message.innerHTML = messages[rnd][choosenMes].citation;
