@@ -12,3 +12,37 @@ body{
     background-color: #709b90;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app h1{
+    display: inline-block;
+    text-align: center;
+    padding: 0.4em;
+    border-radius: 5px;
+    color: rgba(196, 212, 14, 0.6);
+    background-color: #237e69b1;
+    box-shadow: 0.2em 0.2em 0.4em #2e403c92;
+}
+
+.app h2{
+    text-align: center;
+    color: #577428;
+}
+
+.message{
+    background-color: #cdf3d3b1;
+    border-radius: 15px;
+    text-align: block;
+    font-size: 1.2em;
+    margin: 1.2em;
+    padding: 0.9em;
+    top: 5%;
+    left: 25%;
+    max-width: 50vw;
+    box-shadow: 0.2em 0.8em 2em #2e403c92;
+}

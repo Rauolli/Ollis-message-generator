@@ -1,4 +1,6 @@
-const aphorism = [
+const messages = [
+    /* Sprüche, Aphorismen, Zitate */
+    [
     {
         topic: "Sinn des Lebens",
         citation: "<p>Man lebt nicht wenn man nicht weiss wofür!</p>",
@@ -49,9 +51,9 @@ const aphorism = [
         citation: "<p>Je leichter du bist, um so besser trägt dich die Woge des Lebens.</p>",
         source: "Unbekannt"
     },    
-];
-
-const jokes = [
+],
+/* Witze aller Art */
+[
     {
         topic: "Witz, Polizisten",
         citation: "<p>Verkehrskontrolle. Der Polizist: \„Haben Sie etwas getrunken?\“</p><p>Autofahrer: \„Nein.\“</p><p>Polizist: \„Sollten Sie aber! Mindestens 2 Liter am Tag.\“</p>",
@@ -83,13 +85,13 @@ const jokes = [
         source: ""
     },
     {
-        topic: "Witz, Abnehm",
-        citation: "<p>Ich würde ja gerne ein paar Kilos verlieren.</p><p>Aber ich verliere nie. Ich bin ein Gewinner!</p>",
+        topic: "Witz, Abnehmen",
+        citation: "<p>Ich würde ja gerne ein paar Kilos verlieren.</p><p>Aber ich verliere nie. Ich bin ein Gewinnertyp!</p>",
         source: ""
     },
     {
         topic: "Witz, Geschlechterkonflikte",
-        citation: "<p>Siri, warum sind Frauen so komisch zu mir?“</p><p>„Mein Name ist Alexa!</p>",
+        citation: "<p>\"Siri, warum sind Frauen so komisch zu mir?“</p><p>\„Mein Name ist Alexa!\"</p>",
         source: ""
     },
     {
@@ -114,9 +116,9 @@ const jokes = [
     },
 
 
-];
-
-const studentResponses = [
+],
+/* Schülerantworten auf Tests, Fragen und Klausuren */
+[
     {
         topic: "Schülerantworten, Grundschule, Wortarten",
         citation: "<p>Adjektive: Finde das Gegenteil</p><p><ul><li>krank – gesund</li><li>hell – dunkel</li><li>pünktlich – kariert</li></ul></p>",
@@ -142,13 +144,23 @@ const studentResponses = [
         citation: "<p>Frage: Beschreibe mit eigenen Worten, was die Luftbrücke war.</p><p>Antwort: Das war eine Spezialbrücke, die man mit einer Fernbedienung steuern konnte. Beim Steuern hing sie in der Luft.</p>",
         source: "8. Klasse"
     }
-];
+]];
+// Zufallszahl zwischen 0 und der Länge des messages-Arrays 
+const rnd = Math.floor(Math.random() * messages.length);
+// Zufallszahl zwischen 0 und der Länge einer des jeweiligen Kategorien-Arrays inerhalb des messages-Arrays 
+const choosenMes = Math.floor(Math.random() * messages[rnd].length);
 
-const rnd = Math.random();
+// 3 Selektoren für die einzelnen object-properties 
 const topic = document.querySelector(".topic")
 const message = document.querySelector(".citation");
 const source = document.querySelector(".source");
-topic.innerHTML = studentResponses[4].topic;
-message.innerHTML = studentResponses[4].citation;
-source.innerHTML = studentResponses[4].source;
+// Text inerhalb des Selektors anzeigen
+topic.innerHTML = messages[rnd][choosenMes].topic;
+message.innerHTML = messages[rnd][choosenMes].citation;
+source.innerHTML = messages[rnd][choosenMes].source;
 
+console.log("Zufallszahl rnd: " + rnd);
+console.log("Zufallszahl choosenMes: " + choosenMes);
+// console.log(messages[rnd][choosenMes].topic); 
+// console.log(messages[rnd][choosenMes].citation); 
+// messages[rnd][choosenMes].source != ""? console.log(messages[rnd][choosenMes].source): console.log(); 
